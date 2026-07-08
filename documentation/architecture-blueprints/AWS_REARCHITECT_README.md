@@ -22,5 +22,5 @@ To enforce strict isolation, the PaaS backend components utilize custom security
 2. **Endpoint Decoupling:** Instead of routing traffic to static local `/etc/hosts` configurations, the Java application context files (`application.properties`) were refactored to consume dynamic AWS DNS connection strings:
    ```properties
    jdbc.url=jdbc:mysql://vprofile-rds-rearch.cqn4ao8gunha.us-east-1.rds.amazonaws.com :3306/accounts](https://vprofile-production-db.amazonaws.com:3306/accounts)
-   memcached.active.host=vprofile-rearch-cache.osoyyc.cfg.use1.cache.amazonaws.com:11211
+   memcached.active.host=vprofile-rearch-cache.osoyyc.cfg.use1.cache.amazonaws.com
    rabbitmq.address=b-e3ac5f53-1827-4a21-a0ca-fa59a9ee4215.mq.us-east-1.on.aws
