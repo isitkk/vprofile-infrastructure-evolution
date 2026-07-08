@@ -21,6 +21,6 @@ To enforce strict isolation, the PaaS backend components utilize custom security
 1. **Amazon RDS Security Layer:** Attached to a private database subnet group. Its firewall accepts traffic exclusively on Port `3306` originating from the active Elastic Beanstalk security layer.
 2. **Endpoint Decoupling:** Instead of routing traffic to static local `/etc/hosts` configurations, the Java application context files (`application.properties`) were refactored to consume dynamic AWS DNS connection strings:
    ```properties
-   jdbc.url=jdbc:mysql://vprofile-rds-rearch.cqn4ao8gunha.us-east-1.rds.amazonaws.com :3306/accounts](https://vprofile-production-db.amazonaws.com:3306/accounts)
+   jdbc.url=jdbc:mysql://vprofile-rds-rearch.cqn4ao8gunha.us-east-1.rds.amazonaws.com 
    memcached.active.host=vprofile-rearch-cache.osoyyc.cfg.use1.cache.amazonaws.com
    rabbitmq.address=b-e3ac5f53-1827-4a21-a0ca-fa59a9ee4215.mq.us-east-1.on.aws
